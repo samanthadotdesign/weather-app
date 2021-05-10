@@ -20,7 +20,7 @@ weatherForm.addEventListener('submit', (event) => {
 
   // Inside the submit callback, fetch call 
   // Use search text as adddress query string value
-  fetch(`http://localhost:3004/weather?address=${location}`).then( (response) => {
+  fetch(`/weather?address=${location}`).then( (response) => {
       // Get the parse JSON response
       response.json().then( (data) => {
         // If error property, print eror 

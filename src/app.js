@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast');
 const { resolveSoa } = require('dns');
 
 const app = express();
+const port = process.env.PORT || 3000
 
 // Define paths for Express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -103,6 +104,6 @@ app.get('*', (req, res) => {
   })
 })
 
-app.listen(3004, () => {
-  console.log('server is up on port 3004')
+app.listen(port, () => {
+  console.log(`server is up on port ${port}`)
 })
